@@ -10,3 +10,9 @@
   color: #213547;
   background-color: #ffffff;
 }
+
+/* 라우팅 링크 색상 변경 */
+a {
+  font-weight: bold;
+  color: red;
+}
