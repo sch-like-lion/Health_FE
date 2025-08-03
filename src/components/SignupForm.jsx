@@ -75,9 +75,9 @@ export default function SignupForm() {
         className="block w-full border p-2 rounded"
         placeholder="비밀번호"
         value={password}
-        onChange={e => setPassword(e.target.value)}
-      />  
-      // TODO 비밀번호 유효성 검사, 비밀번호 보이기 버튼 추가
+        onChange={e => setPassword(e.target.value)} 
+        //TODO 비밀번호 유효성 검사 및 비밀번호 보이기 버튼 추가 해야함
+      />
 
       <div className="flex space-x-2">
         <input
