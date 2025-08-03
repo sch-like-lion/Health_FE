@@ -1,95 +1,66 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import CounterModify from "@/components/CounterModify";
+import CounterDisplay from "@/components/CounterDisplay";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <>
+      <div className="text-3xl font-bold text-blue-500">Hello Tailwind!</div>
+      <CounterModify />
+      <CounterDisplay />
+    </> 
+  )
+}
+/*
+export default function Home() {
+  return (
+    <>
+      <h1>홈페이지</h1>
+      <nav>
+        <div><Link href={"/callender"}>달력</Link></div>
+        <div><Link href={"/exercise"}>운동</Link></div>
+        <div><Link href={"/"}>홈고민중</Link></div>
+        <div><Link href={"/ranking"}>랭킹</Link></div>
+        <div><Link href={"/settings"}>설정</Link></div>
+      </nav>
+    </>
   );
 }
+
+
+
+*/
+
+
+/*
+라우팅 설정 
+- jwt없으면(로그아웃 상태라면)
+/login
+  /id-lost
+    /이메일화면 토글 or 새 라우팅경로
+  /pw-lost
+    /비번 재설정화면 모달 or 새라우팅경로
+/signup
+
+- jwt있으면(로그인 상태라면)
+/home
+  nav
+  /cal
+  /exercise
+    /bucket/recommend
+    /bucket/custom
+  /home
+  /shop
+  /ranking
+  /setting
+    /app-setting
+    /profile-setting
+
+  /partlist
+    /:partlist
+      /:partlist/:exerciselist
+  
+  /ex-stat (운동화면)
+    들어온 운동종류, 횟수, 세트수 가있다면 그대로 진행
+    아니라면, 사용자가 직접 추가
+*/
