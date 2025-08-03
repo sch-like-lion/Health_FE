@@ -7,7 +7,6 @@ export default function LoginPage() {
       <button>로그인</button>
       <div><Link href={"/login/id-lost"}>아이디 찾기</Link></div>
       <div><Link href={"/login/pw-lost"}>비밀번호 찾기</Link></div>
-      
     </>
   )
 }
