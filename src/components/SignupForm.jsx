@@ -88,7 +88,7 @@ export default function SignupForm() {
         />
         <button
           type="button"
-          className="bg-gray-200 px-2 rounded text-sm"
+          className="bg-gray-200 px-2 rounded text-sm text-white"
           onClick={handleSendCode}  // 클릭할 경우 인증번호 전송. 
         >
           인증번호 전송
@@ -105,7 +105,7 @@ export default function SignupForm() {
           disabled={!isEmailCodeEnabled}  
           // isEmailCodeEnabled가 false라면 이 속성이 true가 되어 입력창이 비활성화되고, 사용자가 입력 불가능
         />
-        <button type="button" className="bg-gray-200 px-2 rounded text-sm">확인</button>
+        <button type="button" className="bg-gray-200 px-2 rounded text-sm text-white">확인</button>
       </div>
 
       <input
