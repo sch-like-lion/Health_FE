@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import styles from "./FindPwForm.module.css"; //module.css 사용
 
