@@ -1,0 +1,12 @@
+{
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/settings/page": "app/settings/page.js",
+  "/ranking/page": "app/ranking/page.js",
+  "/shop/page": "app/shop/page.js",
+  "/exercise/page": "app/exercise/page.js",
+  "/settings/app-setting/page": "app/settings/app-setting/page.js",
+  "/settings/profile-setting/page": "app/settings/profile-setting/page.js",
+  "/callender/page": "app/callender/page.js",
+  "/signup/page": "app/signup/page.js"
+}
