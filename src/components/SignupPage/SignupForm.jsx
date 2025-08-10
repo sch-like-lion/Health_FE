@@ -44,10 +44,43 @@ export default function SignupForm() {
   // 각 동의 항목의 체크 버튼이 눌릴 때마다 상태를 업데이트하고
   // 모든 항목이 체크되면 자동으로 [전체 동의]도 체크
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // api를 이걸로 구현하는게 맞나? 잘 몰루... 일단 둠
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const body = {
+    nickname: name,
+    customId: userid,
+    password,
+    email,
+    height: parseInt(height, 10),
+    weight: parseInt(weight, 10),
+    mailcheck: !!emailCode, // 인증번호 입력이 있으면 true, 없으면 false(임시)
   };
+
+  try {
+    const response = await fetch("http://fitlog.iubns.net:8080/api/users/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+
+    if (response.status === 201) {
+      const data = await response.json();
+      alert(data.message);
+      // TODO 가입 후 원하는 동작작성 (ex페이지 이동)
+    } else if (response.status === 400) {
+      const error = await response.json();
+
+      alert(error.message || Object.values(error)[0]);
+    } else {
+      alert("가입에 실패했습니다. 잠시 후 다시 시도해 주세요.");
+    }
+  } catch (err) {
+    alert("네트워크 오류가 발생했습니다.");
+    console.error(err);
+  }
+};
+
 
   return (
     <form 
