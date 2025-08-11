@@ -11,6 +11,7 @@ export default function Input({ type, placeholder, value, onChange }) {
         type={type} 
         placeholder={placeholder} 
         value={value} 
-        onChange={onChange} />
+        onChange={onChange} 
+        required = {true}/>
   );
 }
