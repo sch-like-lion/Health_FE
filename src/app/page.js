@@ -1,13 +1,15 @@
 import Link from "next/link";
 import CounterModify from "@/components/CounterModify";
 import CounterDisplay from "@/components/CounterDisplay";
+import NavigationBar from "@/components/NavigationBar/NavigationBar";
 
 export default function Home() {
   return (
     <>
       <div className="text-3xl font-bold text-blue-500">Hello Tailwind!</div>
-      <CounterModify />
-      <CounterDisplay />
+      {/* <CounterModify /> */}
+      {/* <CounterDisplay /> */}
+      <NavigationBar />
     </> 
   )
 }

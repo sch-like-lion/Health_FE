@@ -1,13 +1,15 @@
 import Link from "next/link"
 
+import LoginForm from "@/components/LoginPage/LoginForm/LoginForm";
+import SocialLoginButtons from "@/components/LoginPage/SocialLoginButtons/SocialLoginButtons";
+
+
 export default function LoginPage() {
   return (
-    <>
-      <div>여기 로그인 페이지</div>
-      <button>로그인</button>
-      <div><Link href={"/login/id-lost"}>아이디 찾기</Link></div>
-      <div><Link href={"/login/pw-lost"}>비밀번호 찾기</Link></div>
-      
-    </>
+    <div>
+      <h2 className="text-2xl font-semibold absolute left-6 top-6 mb-0">로그인</h2>
+      <LoginForm />
+      <SocialLoginButtons />
+    </div>
   )
 }
