@@ -1,9 +1,10 @@
+import SignUpForm from "@/components/SignupPage/SignupForm";
+
 export default function SingUpPage() {
   return (
-    <>
-      <div>여기 회원가입 페이지</div>
-      <button>회원가입</button>
-    </>
+      // <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <SignUpForm />
+      // </div>
     // 회원가입 페이지
   )
 }
