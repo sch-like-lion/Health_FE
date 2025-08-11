@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 
 export default function SignupForm() {
@@ -46,7 +45,6 @@ export default function SignupForm() {
 
   const handleSubmit = async (e) => {
   e.preventDefault();
-
   const body = {
     nickname: name,
     customId: userid,
@@ -54,7 +52,7 @@ export default function SignupForm() {
     email,
     height: parseInt(height, 10),
     weight: parseInt(weight, 10),
-    mailcheck: !!emailCode, // 인증번호 입력이 있으면 true, 없으면 false(임시)
+    mailcheck: !!emailCode, // 인증번호 입력이 있으면 true, 없으면 false
   };
 
   try {
@@ -67,10 +65,9 @@ export default function SignupForm() {
     if (response.status === 201) {
       const data = await response.json();
       alert(data.message);
-      // TODO 가입 후 원하는 동작작성 (ex페이지 이동)
+      // 가입 후 원하는 동작 (ex 페이지 이동)
     } else if (response.status === 400) {
       const error = await response.json();
-
       alert(error.message || Object.values(error)[0]);
     } else {
       alert("가입에 실패했습니다. 잠시 후 다시 시도해 주세요.");
